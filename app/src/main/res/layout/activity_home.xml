@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_margin"
+    android:focusableInTouchMode="true"
+    tools:context="com.sqlite.recycler.view.HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_create_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/customborder"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layoutUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/accent_green"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edtUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_user_name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/primary_text_green"
+                android:textColorHint="@color/accent_green" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layoutUserDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/accent_green"
+            app:errorEnabled="true"
+            android:imeOptions="actionDone"
+            app:errorTextAppearance="@style/error">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edtUserDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_user_description"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:textColor="@color/primary_text_green"
+                android:textColorHint="@color/accent_green" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnCreateUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/accent_green"
+            android:text="@string/create_user"
+            android:textColor="@color/primary_green" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtUsers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_create_user"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/all_users"
+        android:textColor="@color/accent_green"
+        android:textSize="@dimen/text_font"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_users"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtUsers"
+        android:layout_margin="@dimen/recycler_margin"
+        tools:listitem="@layout/list_item_users" />
+
+</RelativeLayout>

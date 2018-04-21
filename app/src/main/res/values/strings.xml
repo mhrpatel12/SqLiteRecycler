@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SqLiteRecycler</string>
+    <string name="hint_user_name">Enter name</string>
+    <string name="hint_user_description">Enter description</string>
+    <string name="create_user">Create</string>
+    <string name="all_users">All users</string>
+    <string name="error_empty">can\'t be empty</string>
+</resources>
